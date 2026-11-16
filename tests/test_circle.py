@@ -1,12 +1,9 @@
 import unittest
 import math
-
 import circle
-
 
 class TestCircle(unittest.TestCase):
 
-    # Тесты площади круга
     def test_area_integer(self):
         self.assertAlmostEqual(circle.area(2), 4 * math.pi)
 
@@ -16,7 +13,6 @@ class TestCircle(unittest.TestCase):
     def test_area_zero(self):
         self.assertEqual(circle.area(0), 0)
 
-    # Тесты длины окружности
     def test_perimeter_integer(self):
         self.assertAlmostEqual(circle.perimeter(2), 4 * math.pi)
 
@@ -26,7 +22,7 @@ class TestCircle(unittest.TestCase):
     def test_perimeter_zero(self):
         self.assertEqual(circle.perimeter(0), 0)
 
-    # Тесты обработки ошибок
+ 
     def test_area_negative(self):
         with self.assertRaises(ValueError):
             circle.area(-2)

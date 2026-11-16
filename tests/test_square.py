@@ -4,7 +4,6 @@ import math
 import square
 class TestSquare(unittest.TestCase):
 
-    # Тесты площади квадрата
     def test_area_integer(self):
         self.assertEqual(square.area(5), 25)
 
@@ -14,7 +13,7 @@ class TestSquare(unittest.TestCase):
     def test_area_zero(self):
         self.assertEqual(square.area(0), 0)
 
-    # Тесты периметра квадрата
+
     def test_perimeter_integer(self):
         self.assertEqual(square.perimeter(5), 20)
 
@@ -24,7 +23,6 @@ class TestSquare(unittest.TestCase):
     def test_perimeter_zero(self):
         self.assertEqual(square.perimeter(0), 0)
 
-    # Тесты обработки ошибок
     def test_area_negative(self):
         with self.assertRaises(ValueError):
             square.area(-5)
